@@ -1,7 +1,7 @@
 FROM ruby:2.4.1
 ENV LANG C.UTF-8
 RUN apt-get update -qq && \
-    apt-get install -y  build-essential libpq-dev nodejs postgresql-client
+    apt-get install -y  build-essential libpq-dev nodejs postgresql-client vim
 RUN gem install bundler --pre
 RUN mkdir /myapp
 WORKDIR /myapp
