@@ -11,3 +11,7 @@ ENV BUNDLE_JOBS=4 \
     BUNDLE_PATH=/bundle
 RUN bundle install -j4 --path=/bundle
 ADD . /myapp
+
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get install -y postfix
+
